@@ -22,11 +22,8 @@ trait OptimisticLocking
     protected static function bootOptimisticLocking()
     {
         static::creating(function (Model $model) {
-
             if ($model->currentLockVersion() === null) {
-
                 $model->{static::lockVersionColumn()} = static::defaultLockVersion();
-
             }
 
             return $model;
@@ -62,7 +59,6 @@ trait OptimisticLocking
         $dirty = $this->getDirty();
 
         if (count($dirty) > 0) {
-
             $versionColumn = static::lockVersionColumn();
 
             $this->setKeysForSaveQuery($query);
