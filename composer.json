@@ -1,5 +1,5 @@
 {
-    "name": "reshadman/laravel-optimistic-locking",
+    "name": "getsidekicker/laravel-optimistic-locking",
     "description": "Adds optimistic locking feature to eloquent models.",
     "type": "library",
     "license": "MIT",
