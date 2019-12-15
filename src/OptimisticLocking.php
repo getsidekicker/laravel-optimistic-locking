@@ -84,7 +84,7 @@ trait OptimisticLocking
             if ($affected === 0) {
                 $this->setAttribute($versionColumn, $beforeUpdateVersion);
 
-                throw new StaleModelLockingException("Model has been changed during update.");
+                throw new StaleModelLockingException('Model has been changed during update.');
             }
 
             $this->fireModelEvent('updated', false);
@@ -144,6 +144,7 @@ trait OptimisticLocking
     protected function disableLocking()
     {
         $this->lock = false;
+
         return $this;
     }
 
@@ -155,6 +156,7 @@ trait OptimisticLocking
     public function enableLocking()
     {
         $this->lock = true;
+
         return $this;
     }
 }
